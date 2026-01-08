@@ -326,13 +326,21 @@ export default function TradeDashboard() {
     })();
   }, []);
 
-  const sliced = useMemo(() => {
-    if (!data.length) return [];
-    if (range >= 9999) return data;
-    return data.slice(Math.max(0, data.length - range));
-  }, [data, range]);
+const sliced = useMemo(() => {
+  if (!data.length) return [];
+  const sorted = [...data].sort((a, b) => new Date(a.ts) - new Date(b.ts));
+  if (range >= 9999) return sorted;
+  return sorted.slice(Math.max(0, sorted.length - range));
+}, [data, range]);
 
-  const latest = useMemo(() => (data.length ? data[data.length - 1] : null), [data]);
+
+  const latest = useMemo(() => {
+  if (!data.length) return null;
+  return data.reduce((best, cur) => {
+    if (!best) return cur;
+    return new Date(cur.ts) > new Date(best.ts) ? cur : best;
+  }, null);
+}, [data]);
 
   // FX series
   const fxRows = useMemo(() => {
