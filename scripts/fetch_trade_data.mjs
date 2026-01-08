@@ -7,18 +7,22 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const OUT_PATH = path.resolve(__dirname, "../public/trade-data.json");
 
-function todayISO() {
-
-  const d = new Date();
-  const yyyy = d.getUTCFullYear();
-  const mm = String(d.getUTCMonth() + 1).padStart(2, "0");
-  const dd = String(d.getUTCDate()).padStart(2, "0");
-  return `${yyyy}-${mm}-${dd}`;
+function toBeijingISO(d = new Date()) {
+  const bj = new Date(d.getTime() + 8 * 60 * 60 * 1000);
+  return bj.toISOString().replace("Z", "+08:00");
 }
 
-
 function nowISO() {
-  return new Date().toISOString();
+  return toBeijingISO();
+}
+
+function todayISO() {
+  // 用北京时间计算当天日期
+  const bj = new Date(Date.now() + 8 * 60 * 60 * 1000);
+  const yyyy = bj.getUTCFullYear();
+  const mm = String(bj.getUTCMonth() + 1).padStart(2, "0");
+  const dd = String(bj.getUTCDate()).padStart(2, "0");
+  return `${yyyy}-${mm}-${dd}`;
 }
 
 function safeNum(x) {
