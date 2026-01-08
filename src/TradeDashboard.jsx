@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const DATA_URL = "/trade-data.json";
+const DATA_URL = `${import.meta.env.BASE_URL}trade-data.json`;
 
 function num(n) {
   if (n === null || n === undefined || Number.isNaN(n)) return null;
