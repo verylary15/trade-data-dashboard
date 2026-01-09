@@ -192,5 +192,102 @@
       "commodities": null,
       "commoditiesDetailed": {}
     }
+  },
+  {
+    "date": "2026-01-09",
+    "ts": "2026-01-09T10:45:49.126+08:00",
+    "fx": {
+      "usdCny": 6.98246209,
+      "usdBrl": 5.38819254,
+      "brlCny": 1.29588206,
+      "sources": {
+        "spot": "https://www.xe.com/zh-cn/currencyconverter/",
+        "mid": "chinamoney.com.cn (ccpr.json)"
+      },
+      "usdCnyMid": 7.0128
+    },
+    "commodities": {
+      "au9999": {
+        "value": 998.4,
+        "unit": "CNY/g",
+        "source": "https://hq.smm.cn/h5/precious-metals-price"
+      },
+      "ag9999": {
+        "value": 18790,
+        "unit": "CNY/kg",
+        "source": "https://hq.smm.cn/h5/precious-metals-price"
+      },
+      "copper1": {
+        "value": 100680,
+        "unit": "CNY/t",
+        "source": "https://m.ccmn.cn/"
+      },
+      "alA00": {
+        "value": 24030,
+        "unit": "CNY/t",
+        "source": "https://m.ccmn.cn/"
+      },
+      "ironOre62": {
+        "value": 834.44,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-961.html"
+      },
+      "wti": {
+        "value": 55.99,
+        "unit": "USD/bbl",
+        "source": "https://www.100ppi.com/crudeoil/"
+      },
+      "brent": {
+        "value": 59.96,
+        "unit": "USD/bbl",
+        "source": "https://www.100ppi.com/crudeoil/"
+      },
+      "pp": {
+        "value": 6326.67,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-718.html"
+      },
+      "abs": {
+        "value": 8237.5,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-713.html"
+      },
+      "pvc": {
+        "value": 4603,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-107.html"
+      },
+      "lithiumCarbonate": {
+        "value": 135000,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-1162.html"
+      },
+      "corrugated": {
+        "value": 2830,
+        "unit": "CNY/t",
+        "source": "https://m1.100ppi.com/vane/1250-%E7%93%A6%E6%A5%9E%E5%8E%9F%E7%BA%B8.html"
+      },
+      "zn0": {
+        "value": 24050,
+        "unit": "CNY/t",
+        "source": "https://m.ccmn.cn/"
+      },
+      "rebar": {
+        "value": 3247,
+        "unit": "CNY/t",
+        "source": "https://m1.100ppi.com/vane/927-%E8%9E%BA%E7%BA%B9%E9%92%A2.html"
+      },
+      "hrc": {
+        "value": 3336.67,
+        "unit": "CNY/t",
+        "source": "https://m1.100ppi.com/vane/195-%E7%83%AD%E8%BD%A7%E6%9D%BF%E5%8D%B7"
+      }
+    },
+    "errors": {
+      "fxSpot": null,
+      "usdCnyMid": null,
+      "commodities": null,
+      "commoditiesDetailed": {}
+    }
   }
 ]
