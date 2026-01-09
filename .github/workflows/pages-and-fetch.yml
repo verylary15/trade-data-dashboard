@@ -21,8 +21,11 @@ jobs:
   fetch_and_commit:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout latest
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Use Node
         uses: actions/setup-node@v4
@@ -50,6 +53,14 @@ jobs:
     steps:
       - name: Checkout latest
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      
+      - name: Ensure latest main (after fetch_and_commit push)
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
 
       - name: Use Node
         uses: actions/setup-node@v4
