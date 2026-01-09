@@ -208,6 +208,37 @@ function TechTooltip({ active, payload, label }) {
   );
 }
 
+function ClickableLegend({ payload, hiddenSet, onToggle }) {
+  if (!payload?.length) return null;
+
+  return (
+    <div className="flex flex-wrap gap-x-4 gap-y-2 px-2 pt-2 text-xs">
+      {payload.map((item) => {
+        const key = item.dataKey;
+        const hidden = hiddenSet.has(key);
+
+        return (
+          <button
+            key={key}
+            onClick={(e) => onToggle(key, e)}
+            className="flex items-center gap-1.5"
+            style={{ opacity: hidden ? 0.35 : 1 }}
+            title={hidden ? "点击显示（Shift=只看此项）" : "点击隐藏（Shift=只看此项）"}
+          >
+            <span
+              className="inline-block h-2.5 w-2.5 rounded-full"
+              style={{ backgroundColor: item.color }}
+            />
+            <span style={{ textDecoration: hidden ? "line-through" : "none" }}>
+              {item.value}
+            </span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 function MetricCard({ title, value, unit, subtitle, href, alertPct }) {
   const alert = alertPct !== null && Math.abs(alertPct) >= 10;
   return (
@@ -309,6 +340,32 @@ export default function TradeDashboard() {
   const [showHistory, setShowHistory] = useState(false);
   const [expanded, setExpanded] = useState({});
 
+  // Trend line visibility (click legend to toggle; Shift+click to solo)
+  const [hiddenFx, setHiddenFx] = useState(() => new Set());
+  const [hiddenCommodity, setHiddenCommodity] = useState(() => new Set());
+
+  const fxKeys = useMemo(() => ["usdCny", "usdCnyMid", "usdBrl", "brlCny"], []);
+
+  function toggleOne(setter, key) {
+    setter((prev) => {
+      const next = new Set(prev);
+      next.has(key) ? next.delete(key) : next.add(key);
+      return next;
+    });
+  }
+
+  // Shift+click: only show this key; Shift+click again to restore all
+  function soloOne(setter, allKeys, key) {
+    setter((prev) => {
+      const isAlreadySolo = !prev.has(key) && prev.size === Math.max(0, allKeys.length - 1);
+      if (isAlreadySolo) return new Set();
+
+      const next = new Set();
+      for (const k of allKeys) if (k !== key) next.add(k);
+      return next;
+    });
+  }
+
   useEffect(() => {
     (async () => {
       try {
@@ -398,6 +455,11 @@ const sliced = useMemo(() => {
     return commodityMeta.filter((m) => m.group === group).map((m) => m.key);
   }, [group, commodityMeta]);
 
+  // Reset commodity hidden lines when switching group (avoid empty chart confusion)
+  useEffect(() => {
+    setHiddenCommodity(new Set());
+  }, [group]);
+
   // Alerts (>10%) for latest vs previous
   const alerts = useMemo(() => {
     if (!data.length) return [];
@@ -474,7 +536,7 @@ const sliced = useMemo(() => {
                 <div>
                   <div className="text-2xl font-semibold tracking-tight">外贸数据看板</div>
                   <div className="mt-1 text-sm text-slate-600">
-                    汇率（USD/CNY、USD/BRL、BRL/CNY + USD/CNY 中间价） & 原材料（按你最新清单）
+                    汇率 & 原材料价格（一天 2 次：09:30 / 16:00）
                   </div>
                 </div>
               </div>
@@ -553,7 +615,6 @@ const sliced = useMemo(() => {
           <GlassCard className="mt-6 p-4">
             <div>
               <div className="font-semibold">汇率趋势</div>
-              <div className="text-xs text-slate-600">按抓取时间序列（一天 2 次：09:30 / 16:00）</div>
             </div>
 
             <div className="mt-4" style={{ width: "100%", height: 360 }}>
@@ -563,11 +624,22 @@ const sliced = useMemo(() => {
                   <XAxis dataKey="x" tick={{ fontSize: 12, fill: "rgba(51,65,85,0.75)" }} minTickGap={32}  tickFormatter={(v) => (typeof v === "string" && v.length > 10 ? formatTs(v).slice(0, 16) : v)} />
                   <YAxis tick={{ fontSize: 12, fill: "rgba(51,65,85,0.75)" }} />
                   <Tooltip content={(props) => <TechTooltip {...props} />} />
-                  <Legend wrapperStyle={{ color: "rgba(30,41,59,0.85)" }} />
-                  <Line type="monotone" dataKey="usdCny" name="USD/CNY" dot={false} stroke="rgba(37,99,235,0.95)" strokeWidth={2} />
-                  <Line type="monotone" dataKey="usdCnyMid" name="USD/CNY 中间价" dot={false} stroke="rgba(14,165,233,0.95)" strokeWidth={2} />
-                  <Line type="monotone" dataKey="usdBrl" name="USD/BRL" dot={false} stroke="rgba(99,102,241,0.95)" strokeWidth={2} />
-                  <Line type="monotone" dataKey="brlCny" name="BRL/CNY" dot={false} stroke="rgba(16,185,129,0.95)" strokeWidth={2} />
+                  <Legend
+                    content={(props) => (
+                      <ClickableLegend
+                        {...props}
+                        hiddenSet={hiddenFx}
+                        onToggle={(k, e) => {
+                          if (e?.shiftKey) soloOne(setHiddenFx, fxKeys, k);
+                          else toggleOne(setHiddenFx, k);
+                        }}
+                      />
+                    )}
+                  />
+                  <Line type="monotone" dataKey="usdCny" name="USD/CNY" dot={false} stroke="rgba(37,99,235,0.95)" strokeWidth={2} hide={hiddenFx.has("usdCny")} />
+                  <Line type="monotone" dataKey="usdCnyMid" name="USD/CNY 中间价" dot={false} stroke="rgba(14,165,233,0.95)" strokeWidth={2} hide={hiddenFx.has("usdCnyMid")} />
+                  <Line type="monotone" dataKey="usdBrl" name="USD/BRL" dot={false} stroke="rgba(99,102,241,0.95)" strokeWidth={2} hide={hiddenFx.has("usdBrl")} />
+                  <Line type="monotone" dataKey="brlCny" name="BRL/CNY" dot={false} stroke="rgba(16,185,129,0.95)" strokeWidth={2} hide={hiddenFx.has("brlCny")} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -636,7 +708,18 @@ const sliced = useMemo(() => {
                   <XAxis dataKey="x" tick={{ fontSize: 12, fill: "rgba(51,65,85,0.75)" }} minTickGap={32}  tickFormatter={(v) => (typeof v === "string" && v.length > 10 ? formatTs(v).slice(0, 16) : v)} />
                   <YAxis tick={{ fontSize: 12, fill: "rgba(51,65,85,0.75)" }} />
                   <Tooltip content={(props) => <TechTooltip {...props} />} />
-                  <Legend wrapperStyle={{ color: "rgba(30,41,59,0.85)" }} />
+                  <Legend
+                    content={(props) => (
+                      <ClickableLegend
+                        {...props}
+                        hiddenSet={hiddenCommodity}
+                        onToggle={(k, e) => {
+                          if (e?.shiftKey) soloOne(setHiddenCommodity, groupKeys, k);
+                          else toggleOne(setHiddenCommodity, k);
+                        }}
+                      />
+                    )}
+                  />
                   {groupKeys.map((k, i) => {
                     const meta = commodityMeta.find((m) => m.key === k);
                     return (
@@ -648,6 +731,7 @@ const sliced = useMemo(() => {
                         dot={false}
                         strokeWidth={2}
                         stroke={LINE_PALETTE[i % LINE_PALETTE.length]}
+                        hide={hiddenCommodity.has(k)}
                       />
                     );
                   })}
@@ -676,7 +760,7 @@ const sliced = useMemo(() => {
 
           <footer className="mt-10 text-xs text-slate-600">
             <div className="rounded-2xl border border-blue-200/80 bg-white/70 px-4 py-3 backdrop-blur">
-              说明：此项目按“日频/半日频”落库（09:30 / 16:00）。如需分钟级刷新，建议改为后端服务（Cron + DB + API）。
+              本项目为个人工作便利整理，力求准确，如有错漏，欢迎指正。<br /><br />本人任巴西商超中国办事处，深耕北美、拉美市场，欢迎五金建材、手电动工具、家居、厨卫、灯具等品类供应链资源。联系请发邮件至：lary.zhang@outlook.com
             </div>
           </footer>
         </div>
