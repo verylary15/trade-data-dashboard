@@ -25,6 +25,40 @@ function todayISO() {
   return `${yyyy}-${mm}-${dd}`;
 }
 
+function getBjDateHour(d = new Date()) {
+  const bj = new Date(d.getTime() + 8 * 60 * 60 * 1000);
+  return {
+    date: bj.toISOString().slice(0, 10), // YYYY-MM-DD
+    hour: bj.getUTCHours(),
+  };
+}
+
+// 固定到两个槽位：09:30 / 16:00（北京时间）
+function slotTsISO(d = new Date()) {
+  const { date, hour } = getBjDateHour(d);
+  const slot = hour < 13 ? "09:30" : "16:00";
+  return `${date}T${slot}:00+08:00`;
+}
+
+// 核心：按【date + slot】覆盖写入
+function upsertByDaySlot(rows, newRow) {
+  const ts = newRow.ts;
+  const date = ts.slice(0, 10);
+  const slot = ts.slice(11, 16); // 09:30 / 16:00
+  const key = `${date}|${slot}`;
+
+  const filtered = rows.filter((r) => {
+    if (!r.ts) return true;
+    const d = r.ts.slice(0, 10);
+    const s = r.ts.slice(11, 16);
+    return `${d}|${s}` !== key;
+  });
+
+  filtered.push(newRow);
+  return filtered;
+}
+
+
 function safeNum(x) {
   if (x === null || x === undefined) return null;
   const cleaned = String(x).replace(/,/g, "").replace(/\s+/g, "");
@@ -428,7 +462,9 @@ function writeRows(rows) {
 
 async function main() {
   const date = todayISO();
-  const ts = nowISO();
+// ⚠️ 核心变化：ts 不再用真实运行时间，而是“早/晚槽位时间”
+  const ts = slotTsISO();
+  const runTs = nowISO(); // 可选：真实运行时间，仅用于追溯
   const rows = readExisting();
 
   async function safe(name, fn) {
@@ -456,29 +492,20 @@ async function main() {
   const commodities = commR.data?.commodities ?? {};
 
   const row = {
-    date,
-    ts,
-    fx,
-    commodities,
-    errors: {
-      fxSpot: fxSpotR.ok ? null : fxSpotR.error,
-      usdCnyMid: midR.ok ? null : midR.error,
-      commodities: commR.ok ? null : commR.error,
-      commoditiesDetailed: commR.data?.errors ?? null,
-    },
-  };
+  date,
+  ts,        // 09:30 / 16:00（北京时间）
+  runTs,     // 真实执行时间（可选，但非常建议保留）
+  fx,
+  commodities,
+  errors: {
+    fxSpot: fxSpotR.ok ? null : fxSpotR.error,
+    usdCnyMid: midR.ok ? null : midR.error,
+    commodities: commR.ok ? null : commR.error,
+    commoditiesDetailed: commR.data?.errors ?? null,
+  },
+};
 
-  // 允许一天多次写入：默认追加；如果上一次抓取距离现在 < 10 分钟，则视为重复运行，覆盖最后一条
-  const last = rows.length ? rows[rows.length - 1] : null;
-  let out;
-  if (last?.ts) {
-    const lastMs = Date.parse(last.ts);
-    const nowMs = Date.parse(ts);
-    const diffMin = Number.isFinite(lastMs) && Number.isFinite(nowMs) ? (nowMs - lastMs) / 60000 : Infinity;
-    out = diffMin < 10 ? [...rows.slice(0, -1), row] : [...rows, row];
-  } else {
-    out = [...rows, row];
-  }
+ let out = upsertByDaySlot(rows, row);
 
   // 保留最近 2000 条，避免文件无限增长
   if (out.length > 2000) out = out.slice(out.length - 2000);
