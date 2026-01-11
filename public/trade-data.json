@@ -490,7 +490,7 @@
   {
     "date": "2026-01-11",
     "ts": "2026-01-11T09:30:00+08:00",
-    "runTs": "2026-01-11T11:22:59.774+08:00",
+    "runTs": "2026-01-11T11:25:44.757+08:00",
     "fx": {
       "usdCny": 6.98183682,
       "usdBrl": 5.37358913,
@@ -573,7 +573,7 @@
         "source": "https://m1.100ppi.com/vane/927-%E8%9E%BA%E7%BA%B9%E9%92%A2.html"
       },
       "hrc": {
-        "value": null,
+        "value": 3313.33,
         "unit": "CNY/t",
         "source": "https://m1.100ppi.com/vane/195-%E7%83%AD%E8%BD%A7%E6%9D%BF%E5%8D%B7"
       }
@@ -582,9 +582,7 @@
       "fxSpot": null,
       "usdCnyMid": null,
       "commodities": null,
-      "commoditiesDetailed": {
-        "hrc": "parse_failed (steel)"
-      }
+      "commoditiesDetailed": {}
     }
   }
 ]
