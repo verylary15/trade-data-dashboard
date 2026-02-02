@@ -5154,7 +5154,7 @@
   {
     "date": "2026-02-02",
     "ts": "2026-02-02T09:30:00+08:00",
-    "runTs": "2026-02-02T12:01:38.253+08:00",
+    "runTs": "2026-02-02T12:04:10.584+08:00",
     "fx": {
       "usdCny": 6.95250402,
       "usdBrl": 5.26750492,
@@ -5185,21 +5185,6 @@
         "value": 23700,
         "unit": "CNY/t",
         "source": "https://m.ccmn.cn/"
-      },
-      "ironOre62": {
-        "value": null,
-        "unit": "CNY/t",
-        "source": "https://www.100ppi.com/vane/detail-961.html"
-      },
-      "wti": {
-        "value": null,
-        "unit": "USD/bbl",
-        "source": "https://www.100ppi.com/crudeoil/"
-      },
-      "brent": {
-        "value": null,
-        "unit": "USD/bbl",
-        "source": "https://www.100ppi.com/crudeoil/"
       },
       "pp": {
         "value": null,
@@ -5247,9 +5232,8 @@
       "usdCnyMid": null,
       "commodities": null,
       "commoditiesDetailed": {
-        "ironOre62": "parse_failed (iron ore)",
-        "wti": "parse_failed (oil)",
-        "brent": "parse_failed (oil)",
+        "subtask:iron ore": "fetch failed",
+        "subtask:oil": "fetch failed",
         "ppRaffia": "parse_failed (chem)",
         "absGeneral": "parse_failed (chem)",
         "pvcSG5": "parse_failed (chem)",
