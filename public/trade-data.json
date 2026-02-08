@@ -6551,5 +6551,114 @@
         "hrc": "parse_failed (steel)"
       }
     }
+  },
+  {
+    "date": "2026-02-08",
+    "ts": "2026-02-08T16:00:00+08:00",
+    "runTs": "2026-02-08T16:17:28.403+08:00",
+    "fx": {
+      "usdCny": 6.93929241,
+      "usdBrl": 5.2215081,
+      "brlCny": 1.3289824,
+      "sources": {
+        "spot": "https://www.xe.com/zh-cn/currencyconverter/",
+        "mid": "chinamoney.com.cn (ccpr.json)"
+      },
+      "usdCnyMid": 6.959
+    },
+    "commodities": {
+      "au9999": {
+        "value": 1082.05,
+        "unit": "CNY/g",
+        "source": "https://hq.smm.cn/h5/precious-metals-price"
+      },
+      "ag9999": {
+        "value": 20882,
+        "unit": "CNY/kg",
+        "source": "https://hq.smm.cn/h5/precious-metals-price"
+      },
+      "copper1": {
+        "value": 100130,
+        "unit": "CNY/t",
+        "source": "https://m.ccmn.cn/"
+      },
+      "alA00": {
+        "value": 23150,
+        "unit": "CNY/t",
+        "source": "https://m.ccmn.cn/"
+      },
+      "ironOre62": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-961.html"
+      },
+      "wti": {
+        "value": null,
+        "unit": "USD/bbl",
+        "source": "https://www.100ppi.com/crudeoil/"
+      },
+      "brent": {
+        "value": null,
+        "unit": "USD/bbl",
+        "source": "https://www.100ppi.com/crudeoil/"
+      },
+      "pp": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-718.html"
+      },
+      "abs": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-713.html"
+      },
+      "pvc": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-107.html"
+      },
+      "lithiumCarbonate": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-1162.html"
+      },
+      "corrugated": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://m1.100ppi.com/vane/1250-%E7%93%A6%E6%A5%9E%E5%8E%9F%E7%BA%B8.html"
+      },
+      "zn0": {
+        "value": 24550,
+        "unit": "CNY/t",
+        "source": "https://m.ccmn.cn/"
+      },
+      "rebar": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://m1.100ppi.com/vane/927-%E8%9E%BA%E7%BA%B9%E9%92%A2.html"
+      },
+      "hrc": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://m1.100ppi.com/vane/195-%E7%83%AD%E8%BD%A7%E6%9D%BF%E5%8D%B7"
+      }
+    },
+    "errors": {
+      "fxSpot": null,
+      "usdCnyMid": null,
+      "commodities": null,
+      "commoditiesDetailed": {
+        "ironOre62": "parse_failed (iron ore)",
+        "wti": "parse_failed (oil)",
+        "brent": "parse_failed (oil)",
+        "ppRaffia": "parse_failed (chem)",
+        "absGeneral": "parse_failed (chem)",
+        "pvcSG5": "parse_failed (chem)",
+        "lithiumCarbonate": "parse_failed (chem)",
+        "corrugatedPaper": "parse_failed (paper)",
+        "rebarHRB400": "parse_failed (steel)",
+        "hrc": "parse_failed (steel)"
+      }
+    }
   }
 ]
