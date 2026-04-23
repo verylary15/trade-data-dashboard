@@ -22678,11 +22678,11 @@
   {
     "date": "2026-04-23",
     "ts": "2026-04-23T16:00:00+08:00",
-    "runTs": "2026-04-23T17:15:39.538+08:00",
+    "runTs": "2026-04-23T17:19:38.908+08:00",
     "fx": {
       "usdCny": 6.82366069,
       "usdBrl": 4.98350282,
-      "brlCny": 1.37097044,
+      "brlCny": 1.37610201,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
