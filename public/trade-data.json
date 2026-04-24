@@ -22896,7 +22896,7 @@
   {
     "date": "2026-04-24",
     "ts": "2026-04-24T16:00:00+08:00",
-    "runTs": "2026-04-24T17:19:50.185+08:00",
+    "runTs": "2026-04-24T17:24:33.971+08:00",
     "fx": {
       "usdCny": 6.83600558,
       "usdBrl": 5.0324846,
@@ -22928,21 +22928,6 @@
         "unit": "CNY/t",
         "source": "https://m.ccmn.cn/"
       },
-      "ironOre62": {
-        "value": null,
-        "unit": "CNY/t",
-        "source": "https://www.100ppi.com/vane/detail-961.html"
-      },
-      "wti": {
-        "value": null,
-        "unit": "USD/bbl",
-        "source": "https://www.100ppi.com/crudeoil/"
-      },
-      "brent": {
-        "value": null,
-        "unit": "USD/bbl",
-        "source": "https://www.100ppi.com/crudeoil/"
-      },
       "pp": {
         "value": null,
         "unit": "CNY/t",
@@ -22972,16 +22957,6 @@
         "value": 24150,
         "unit": "CNY/t",
         "source": "https://m.ccmn.cn/"
-      },
-      "rebar": {
-        "value": null,
-        "unit": "CNY/t",
-        "source": "https://m1.100ppi.com/vane/927-%E8%9E%BA%E7%BA%B9%E9%92%A2.html"
-      },
-      "hrc": {
-        "value": null,
-        "unit": "CNY/t",
-        "source": "https://m1.100ppi.com/vane/195-%E7%83%AD%E8%BD%A7%E6%9D%BF%E5%8D%B7"
       }
     },
     "errors": {
@@ -22989,16 +22964,14 @@
       "usdCnyMid": null,
       "commodities": null,
       "commoditiesDetailed": {
-        "ironOre62": "parse_failed (iron ore)",
-        "wti": "parse_failed (oil)",
-        "brent": "parse_failed (oil)",
+        "subtask:iron ore": "fetch failed",
+        "subtask:oil": "fetch failed",
         "ppRaffia": "parse_failed (chem)",
         "absGeneral": "parse_failed (chem)",
         "pvcSG5": "parse_failed (chem)",
         "lithiumCarbonate": "parse_failed (chem)",
         "corrugatedPaper": "parse_failed (paper)",
-        "rebarHRB400": "parse_failed (steel)",
-        "hrc": "parse_failed (steel)"
+        "subtask:steel": "fetch failed"
       }
     }
   }
