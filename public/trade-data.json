@@ -23959,7 +23959,7 @@
   {
     "date": "2026-04-29",
     "ts": "2026-04-29T16:00:00+08:00",
-    "runTs": "2026-04-29T17:53:23.412+08:00",
+    "runTs": "2026-04-29T17:59:23.694+08:00",
     "fx": {
       "usdCny": 6.83589228,
       "usdBrl": 4.9769792,
@@ -24006,6 +24006,31 @@
         "unit": "USD/bbl",
         "source": "https://www.100ppi.com/crudeoil/"
       },
+      "pp": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-718.html"
+      },
+      "abs": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-713.html"
+      },
+      "pvc": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-107.html"
+      },
+      "lithiumCarbonate": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-1162.html"
+      },
+      "corrugated": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://m1.100ppi.com/vane/1250-%E7%93%A6%E6%A5%9E%E5%8E%9F%E7%BA%B8.html"
+      },
       "zn0": {
         "value": 23770,
         "unit": "CNY/t",
@@ -24030,8 +24055,11 @@
         "ironOre62": "parse_failed (iron ore)",
         "wti": "parse_failed (oil)",
         "brent": "parse_failed (oil)",
-        "subtask:chem": "fetch failed",
-        "subtask:paper": "fetch failed",
+        "ppRaffia": "parse_failed (chem)",
+        "absGeneral": "parse_failed (chem)",
+        "pvcSG5": "parse_failed (chem)",
+        "lithiumCarbonate": "parse_failed (chem)",
+        "corrugatedPaper": "parse_failed (paper)",
         "rebarHRB400": "parse_failed (steel)",
         "hrc": "parse_failed (steel)"
       }
