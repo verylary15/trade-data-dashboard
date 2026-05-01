@@ -24286,16 +24286,16 @@
   {
     "date": "2026-05-01",
     "ts": "2026-05-01T16:00:00+08:00",
-    "runTs": "2026-05-01T13:03:09.225+08:00",
+    "runTs": "2026-05-01T17:23:01.193+08:00",
     "fx": {
       "usdCny": 6.82932528,
-      "usdBrl": 4.96633061,
+      "usdBrl": 4.95578221,
       "brlCny": 1.37466827,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
       },
-      "usdCnyMid": null
+      "usdCnyMid": 6.8628
     },
     "commodities": {
       "au9999": {
