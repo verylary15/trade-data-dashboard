@@ -28428,11 +28428,11 @@
   {
     "date": "2026-05-27",
     "ts": "2026-05-27T16:00:00+08:00",
-    "runTs": "2026-05-27T13:51:33.117+08:00",
+    "runTs": "2026-05-27T19:24:56.530+08:00",
     "fx": {
       "usdCny": 6.78186593,
       "usdBrl": 5.04350765,
-      "brlCny": 1.3463892,
+      "brlCny": 1.34768581,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
