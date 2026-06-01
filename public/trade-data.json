@@ -28973,11 +28973,11 @@
   {
     "date": "2026-06-01",
     "ts": "2026-06-01T16:00:00+08:00",
-    "runTs": "2026-06-01T14:27:32.390+08:00",
+    "runTs": "2026-06-01T21:23:32.946+08:00",
     "fx": {
-      "usdCny": 6.76653045,
-      "usdBrl": 5.03643657,
-      "brlCny": 1.34333007,
+      "usdCny": 6.76579513,
+      "usdBrl": 5.04625123,
+      "brlCny": 1.33976655,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
@@ -29040,6 +29040,16 @@
         "unit": "CNY/t",
         "source": "https://www.100ppi.com/vane/detail-1162.html"
       },
+      "corrugated": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://m1.100ppi.com/vane/1250-%E7%93%A6%E6%A5%9E%E5%8E%9F%E7%BA%B8.html"
+      },
+      "zn0": {
+        "value": 24740,
+        "unit": "CNY/t",
+        "source": "https://m.ccmn.cn/"
+      },
       "rebar": {
         "value": null,
         "unit": "CNY/t",
@@ -29063,8 +29073,7 @@
         "absGeneral": "parse_failed (chem)",
         "pvcSG5": "parse_failed (chem)",
         "lithiumCarbonate": "parse_failed (chem)",
-        "subtask:paper": "fetch failed",
-        "subtask:zinc": "fetch failed",
+        "corrugatedPaper": "parse_failed (paper)",
         "rebarHRB400": "parse_failed (steel)",
         "hrc": "parse_failed (steel)"
       }
