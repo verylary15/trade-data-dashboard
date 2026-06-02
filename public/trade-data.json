@@ -29082,7 +29082,7 @@
   {
     "date": "2026-06-02",
     "ts": "2026-06-02T16:00:00+08:00",
-    "runTs": "2026-06-02T19:55:01.384+08:00",
+    "runTs": "2026-06-02T19:58:03.319+08:00",
     "fx": {
       "usdCny": 6.76300276,
       "usdBrl": 5.02734598,
@@ -29091,7 +29091,7 @@
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
       },
-      "usdCnyMid": 6.8187
+      "usdCnyMid": null
     },
     "commodities": {
       "au9999": {
@@ -29103,16 +29103,6 @@
         "value": 18012,
         "unit": "CNY/kg",
         "source": "https://hq.smm.cn/h5/precious-metals-price"
-      },
-      "copper1": {
-        "value": 105940,
-        "unit": "CNY/t",
-        "source": "https://m.ccmn.cn/"
-      },
-      "alA00": {
-        "value": 24330,
-        "unit": "CNY/t",
-        "source": "https://m.ccmn.cn/"
       },
       "ironOre62": {
         "value": null,
@@ -29154,11 +29144,6 @@
         "unit": "CNY/t",
         "source": "https://m1.100ppi.com/vane/1250-%E7%93%A6%E6%A5%9E%E5%8E%9F%E7%BA%B8.html"
       },
-      "zn0": {
-        "value": 24730,
-        "unit": "CNY/t",
-        "source": "https://m.ccmn.cn/"
-      },
       "rebar": {
         "value": null,
         "unit": "CNY/t",
@@ -29175,6 +29160,7 @@
       "usdCnyMid": null,
       "commodities": null,
       "commoditiesDetailed": {
+        "subtask:cu/al": "fetch failed",
         "ironOre62": "parse_failed (iron ore)",
         "wti": "parse_failed (oil)",
         "brent": "parse_failed (oil)",
@@ -29183,6 +29169,7 @@
         "pvcSG5": "parse_failed (chem)",
         "lithiumCarbonate": "parse_failed (chem)",
         "corrugatedPaper": "parse_failed (paper)",
+        "subtask:zinc": "fetch failed",
         "rebarHRB400": "parse_failed (steel)",
         "hrc": "parse_failed (steel)"
       }
