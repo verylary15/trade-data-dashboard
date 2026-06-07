@@ -29614,13 +29614,13 @@
   {
     "date": "2026-06-07",
     "ts": "2026-06-07T16:00:00+08:00",
-    "runTs": "2026-06-07T14:00:50.609+08:00",
+    "runTs": "2026-06-07T18:17:53.421+08:00",
     "fx": {
-      "usdCny": 6.76748473,
-      "usdBrl": 5.17200656,
-      "brlCny": 1.30930329,
+      "usdCny": null,
+      "usdBrl": null,
+      "brlCny": null,
       "sources": {
-        "spot": "https://www.xe.com/zh-cn/currencyconverter/",
+        "spot": "xe.com",
         "mid": "chinamoney.com.cn (ccpr.json)"
       },
       "usdCnyMid": 6.8157
@@ -29635,16 +29635,6 @@
         "value": 17507,
         "unit": "CNY/kg",
         "source": "https://hq.smm.cn/h5/precious-metals-price"
-      },
-      "copper1": {
-        "value": 105530,
-        "unit": "CNY/t",
-        "source": "https://m.ccmn.cn/"
-      },
-      "alA00": {
-        "value": 24220,
-        "unit": "CNY/t",
-        "source": "https://m.ccmn.cn/"
       },
       "ironOre62": {
         "value": null,
@@ -29686,11 +29676,6 @@
         "unit": "CNY/t",
         "source": "https://m1.100ppi.com/vane/1250-%E7%93%A6%E6%A5%9E%E5%8E%9F%E7%BA%B8.html"
       },
-      "zn0": {
-        "value": 24760,
-        "unit": "CNY/t",
-        "source": "https://m.ccmn.cn/"
-      },
       "rebar": {
         "value": null,
         "unit": "CNY/t",
@@ -29703,10 +29688,11 @@
       }
     },
     "errors": {
-      "fxSpot": null,
+      "fxSpot": "HTTP 403 for https://www.xe.com/zh-cn/currencyconverter/convert/?Amount=1&From=USD&To=BRL",
       "usdCnyMid": null,
       "commodities": null,
       "commoditiesDetailed": {
+        "subtask:cu/al": "fetch failed",
         "ironOre62": "parse_failed (iron ore)",
         "wti": "parse_failed (oil)",
         "brent": "parse_failed (oil)",
@@ -29715,6 +29701,7 @@
         "pvcSG5": "parse_failed (chem)",
         "lithiumCarbonate": "parse_failed (chem)",
         "corrugatedPaper": "parse_failed (paper)",
+        "subtask:zinc": "fetch failed",
         "rebarHRB400": "parse_failed (steel)",
         "hrc": "parse_failed (steel)"
       }
