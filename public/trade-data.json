@@ -30050,11 +30050,11 @@
   {
     "date": "2026-06-11",
     "ts": "2026-06-11T16:00:00+08:00",
-    "runTs": "2026-06-11T14:15:27.294+08:00",
+    "runTs": "2026-06-11T20:00:15.537+08:00",
     "fx": {
-      "usdCny": 6.77566248,
-      "usdBrl": 5.19252532,
-      "brlCny": 1.30451344,
+      "usdCny": 6.77797383,
+      "usdBrl": 5.18329301,
+      "brlCny": 1.30771589,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
