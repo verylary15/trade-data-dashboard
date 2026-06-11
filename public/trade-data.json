@@ -30050,7 +30050,7 @@
   {
     "date": "2026-06-11",
     "ts": "2026-06-11T16:00:00+08:00",
-    "runTs": "2026-06-11T14:11:56.301+08:00",
+    "runTs": "2026-06-11T14:15:27.294+08:00",
     "fx": {
       "usdCny": 6.77566248,
       "usdBrl": 5.19252532,
@@ -30082,6 +30082,21 @@
         "unit": "CNY/t",
         "source": "https://m.ccmn.cn/"
       },
+      "ironOre62": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-961.html"
+      },
+      "wti": {
+        "value": null,
+        "unit": "USD/bbl",
+        "source": "https://www.100ppi.com/crudeoil/"
+      },
+      "brent": {
+        "value": null,
+        "unit": "USD/bbl",
+        "source": "https://www.100ppi.com/crudeoil/"
+      },
       "pp": {
         "value": null,
         "unit": "CNY/t",
@@ -30102,6 +30117,16 @@
         "unit": "CNY/t",
         "source": "https://www.100ppi.com/vane/detail-1162.html"
       },
+      "corrugated": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://m1.100ppi.com/vane/1250-%E7%93%A6%E6%A5%9E%E5%8E%9F%E7%BA%B8.html"
+      },
+      "zn0": {
+        "value": 24180,
+        "unit": "CNY/t",
+        "source": "https://m.ccmn.cn/"
+      },
       "rebar": {
         "value": null,
         "unit": "CNY/t",
@@ -30118,14 +30143,14 @@
       "usdCnyMid": null,
       "commodities": null,
       "commoditiesDetailed": {
-        "subtask:iron ore": "fetch failed",
-        "subtask:oil": "fetch failed",
+        "ironOre62": "parse_failed (iron ore)",
+        "wti": "parse_failed (oil)",
+        "brent": "parse_failed (oil)",
         "ppRaffia": "parse_failed (chem)",
         "absGeneral": "parse_failed (chem)",
         "pvcSG5": "parse_failed (chem)",
         "lithiumCarbonate": "parse_failed (chem)",
-        "subtask:paper": "fetch failed",
-        "subtask:zinc": "fetch failed",
+        "corrugatedPaper": "parse_failed (paper)",
         "rebarHRB400": "parse_failed (steel)",
         "hrc": "parse_failed (steel)"
       }
