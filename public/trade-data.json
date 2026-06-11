@@ -30046,5 +30046,89 @@
         "hrc": "parse_failed (steel)"
       }
     }
+  },
+  {
+    "date": "2026-06-11",
+    "ts": "2026-06-11T16:00:00+08:00",
+    "runTs": "2026-06-11T14:11:56.301+08:00",
+    "fx": {
+      "usdCny": 6.77566248,
+      "usdBrl": 5.19252532,
+      "brlCny": 1.30451344,
+      "sources": {
+        "spot": "https://www.xe.com/zh-cn/currencyconverter/",
+        "mid": "chinamoney.com.cn (ccpr.json)"
+      },
+      "usdCnyMid": 6.815
+    },
+    "commodities": {
+      "au9999": {
+        "value": 885.1,
+        "unit": "CNY/g",
+        "source": "https://hq.smm.cn/h5/precious-metals-price"
+      },
+      "ag9999": {
+        "value": 15365,
+        "unit": "CNY/kg",
+        "source": "https://hq.smm.cn/h5/precious-metals-price"
+      },
+      "copper1": {
+        "value": 103370,
+        "unit": "CNY/t",
+        "source": "https://m.ccmn.cn/"
+      },
+      "alA00": {
+        "value": 23970,
+        "unit": "CNY/t",
+        "source": "https://m.ccmn.cn/"
+      },
+      "pp": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-718.html"
+      },
+      "abs": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-713.html"
+      },
+      "pvc": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-107.html"
+      },
+      "lithiumCarbonate": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://www.100ppi.com/vane/detail-1162.html"
+      },
+      "rebar": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://m1.100ppi.com/vane/927-%E8%9E%BA%E7%BA%B9%E9%92%A2.html"
+      },
+      "hrc": {
+        "value": null,
+        "unit": "CNY/t",
+        "source": "https://m1.100ppi.com/vane/195-%E7%83%AD%E8%BD%A7%E6%9D%BF%E5%8D%B7"
+      }
+    },
+    "errors": {
+      "fxSpot": null,
+      "usdCnyMid": null,
+      "commodities": null,
+      "commoditiesDetailed": {
+        "subtask:iron ore": "fetch failed",
+        "subtask:oil": "fetch failed",
+        "ppRaffia": "parse_failed (chem)",
+        "absGeneral": "parse_failed (chem)",
+        "pvcSG5": "parse_failed (chem)",
+        "lithiumCarbonate": "parse_failed (chem)",
+        "subtask:paper": "fetch failed",
+        "subtask:zinc": "fetch failed",
+        "rebarHRB400": "parse_failed (steel)",
+        "hrc": "parse_failed (steel)"
+      }
+    }
   }
 ]
