@@ -30268,7 +30268,7 @@
   {
     "date": "2026-06-13",
     "ts": "2026-06-13T16:00:00+08:00",
-    "runTs": "2026-06-13T13:55:07.780+08:00",
+    "runTs": "2026-06-13T18:18:18.670+08:00",
     "fx": {
       "usdCny": null,
       "usdBrl": null,
@@ -30357,7 +30357,7 @@
       }
     },
     "errors": {
-      "fxSpot": "HTTP 403 for https://www.xe.com/zh-cn/currencyconverter/convert/?Amount=1&From=BRL&To=CNY",
+      "fxSpot": "HTTP 403 for https://www.xe.com/zh-cn/currencyconverter/convert/?Amount=1&From=USD&To=BRL",
       "usdCnyMid": null,
       "commodities": null,
       "commoditiesDetailed": {
