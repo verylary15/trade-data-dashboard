@@ -30486,13 +30486,13 @@
   {
     "date": "2026-06-15",
     "ts": "2026-06-15T16:00:00+08:00",
-    "runTs": "2026-06-15T21:42:19.821+08:00",
+    "runTs": "2026-06-15T21:48:00.781+08:00",
     "fx": {
-      "usdCny": null,
-      "usdBrl": null,
-      "brlCny": null,
+      "usdCny": 6.75816234,
+      "usdBrl": 5.0331194,
+      "brlCny": 1.33532646,
       "sources": {
-        "spot": "xe.com",
+        "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
       },
       "usdCnyMid": 6.8088
@@ -30575,7 +30575,7 @@
       }
     },
     "errors": {
-      "fxSpot": "HTTP 403 for https://www.xe.com/zh-cn/currencyconverter/convert/?Amount=1&From=BRL&To=CNY",
+      "fxSpot": null,
       "usdCnyMid": null,
       "commodities": null,
       "commoditiesDetailed": {
