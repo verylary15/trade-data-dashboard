@@ -31140,11 +31140,11 @@
   {
     "date": "2026-06-21",
     "ts": "2026-06-21T16:00:00+08:00",
-    "runTs": "2026-06-21T14:26:10.146+08:00",
+    "runTs": "2026-06-21T18:56:23.743+08:00",
     "fx": {
-      "usdCny": 6.76167741,
+      "usdCny": 6.774142,
       "usdBrl": 5.15139732,
-      "brlCny": 1.31365169,
+      "brlCny": 1.31502291,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
