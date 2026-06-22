@@ -31249,11 +31249,11 @@
   {
     "date": "2026-06-22",
     "ts": "2026-06-22T16:00:00+08:00",
-    "runTs": "2026-06-22T14:57:17.342+08:00",
+    "runTs": "2026-06-22T21:23:25.076+08:00",
     "fx": {
-      "usdCny": 6.76907093,
-      "usdBrl": 5.15264063,
-      "brlCny": 1.31596129,
+      "usdCny": 6.77706873,
+      "usdBrl": 5.14784325,
+      "brlCny": 1.31471972,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
