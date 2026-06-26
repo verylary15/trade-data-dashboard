@@ -31685,16 +31685,16 @@
   {
     "date": "2026-06-26",
     "ts": "2026-06-26T16:00:00+08:00",
-    "runTs": "2026-06-26T18:39:59.329+08:00",
+    "runTs": "2026-06-26T18:45:12.931+08:00",
     "fx": {
-      "usdCny": 6.79790077,
+      "usdCny": 6.79994638,
       "usdBrl": 5.19197548,
       "brlCny": 1.31364938,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
       },
-      "usdCnyMid": null
+      "usdCnyMid": 6.8166
     },
     "commodities": {
       "au9999": {
