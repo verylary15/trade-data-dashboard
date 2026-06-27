@@ -31794,11 +31794,11 @@
   {
     "date": "2026-06-27",
     "ts": "2026-06-27T16:00:00+08:00",
-    "runTs": "2026-06-27T13:12:46.729+08:00",
+    "runTs": "2026-06-27T17:53:23.898+08:00",
     "fx": {
       "usdCny": 6.8007938,
-      "usdBrl": 5.17286721,
-      "brlCny": 1.31415501,
+      "usdBrl": 5.17300083,
+      "brlCny": 1.31482743,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
