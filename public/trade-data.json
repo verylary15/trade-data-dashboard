@@ -32121,7 +32121,7 @@
   {
     "date": "2026-06-30",
     "ts": "2026-06-30T16:00:00+08:00",
-    "runTs": "2026-06-30T13:39:28.935+08:00",
+    "runTs": "2026-06-30T13:44:52.009+08:00",
     "fx": {
       "usdCny": 6.79463078,
       "usdBrl": 5.18646455,
@@ -32142,16 +32142,6 @@
         "value": 13926,
         "unit": "CNY/kg",
         "source": "https://hq.smm.cn/h5/precious-metals-price"
-      },
-      "copper1": {
-        "value": 102270,
-        "unit": "CNY/t",
-        "source": "https://m.ccmn.cn/"
-      },
-      "alA00": {
-        "value": 22500,
-        "unit": "CNY/t",
-        "source": "https://m.ccmn.cn/"
       },
       "ironOre62": {
         "value": null,
@@ -32214,6 +32204,7 @@
       "usdCnyMid": null,
       "commodities": null,
       "commoditiesDetailed": {
+        "subtask:cu/al": "fetch failed",
         "ironOre62": "parse_failed (iron ore)",
         "wti": "parse_failed (oil)",
         "brent": "parse_failed (oil)",
