@@ -32884,16 +32884,16 @@
   {
     "date": "2026-07-07",
     "ts": "2026-07-07T16:00:00+08:00",
-    "runTs": "2026-07-07T18:41:27.148+08:00",
+    "runTs": "2026-07-07T18:48:42.043+08:00",
     "fx": {
       "usdCny": 6.79380664,
-      "usdBrl": 5.12724047,
+      "usdBrl": 5.14200941,
       "brlCny": 1.32552273,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
       },
-      "usdCnyMid": 6.8054
+      "usdCnyMid": null
     },
     "commodities": {
       "au9999": {
