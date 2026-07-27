@@ -36808,11 +36808,11 @@
   {
     "date": "2026-07-27",
     "ts": "2026-07-27T16:00:00+08:00",
-    "runTs": "2026-07-27T13:10:45.348+08:00",
+    "runTs": "2026-07-27T18:58:03.263+08:00",
     "fx": {
-      "usdCny": 6.77304366,
-      "usdBrl": 5.08579223,
-      "brlCny": 1.33185121,
+      "usdCny": 6.7673431,
+      "usdBrl": 5.08514379,
+      "brlCny": 1.33109784,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
