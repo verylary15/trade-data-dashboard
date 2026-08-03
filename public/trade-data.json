@@ -38334,11 +38334,11 @@
   {
     "date": "2026-08-03",
     "ts": "2026-08-03T16:00:00+08:00",
-    "runTs": "2026-08-03T19:00:36.861+08:00",
+    "runTs": "2026-08-03T19:14:31.613+08:00",
     "fx": {
       "usdCny": 6.75281871,
       "usdBrl": 5.0766905,
-      "brlCny": 1.32992939,
+      "brlCny": 1.33001722,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
