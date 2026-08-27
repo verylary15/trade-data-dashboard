@@ -43546,11 +43546,11 @@
   {
     "date": "2026-08-28",
     "ts": "2026-08-28T09:30:00+08:00",
-    "runTs": "2026-08-28T02:25:57.278+08:00",
+    "runTs": "2026-08-28T02:41:27.125+08:00",
     "fx": {
       "usdCny": 6.72102949,
       "usdBrl": 5.17287764,
-      "brlCny": 1.30481698,
+      "brlCny": 1.3018901,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
