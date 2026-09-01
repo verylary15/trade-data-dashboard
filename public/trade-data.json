@@ -44200,11 +44200,11 @@
   {
     "date": "2026-09-01",
     "ts": "2026-09-01T16:00:00+08:00",
-    "runTs": "2026-09-01T14:35:06.330+08:00",
+    "runTs": "2026-09-01T20:48:52.103+08:00",
     "fx": {
-      "usdCny": 6.72067809,
-      "usdBrl": 5.18397668,
-      "brlCny": 1.2963469,
+      "usdCny": 6.72184801,
+      "usdBrl": 5.1861696,
+      "brlCny": 1.2962523,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
