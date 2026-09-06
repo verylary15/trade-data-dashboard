@@ -44745,11 +44745,11 @@
   {
     "date": "2026-09-06",
     "ts": "2026-09-06T16:00:00+08:00",
-    "runTs": "2026-09-06T14:19:58.507+08:00",
+    "runTs": "2026-09-06T19:45:57.096+08:00",
     "fx": {
       "usdCny": 6.71186142,
       "usdBrl": 5.12651631,
-      "brlCny": 1.30973423,
+      "brlCny": 1.30908062,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
