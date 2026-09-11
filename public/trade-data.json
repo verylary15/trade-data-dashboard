@@ -45281,11 +45281,11 @@
   {
     "date": "2026-09-11",
     "ts": "2026-09-11T16:00:00+08:00",
-    "runTs": "2026-09-11T14:26:36.905+08:00",
+    "runTs": "2026-09-11T20:22:34.338+08:00",
     "fx": {
-      "usdCny": 6.70740406,
-      "usdBrl": 5.10491055,
-      "brlCny": 1.31417495,
+      "usdCny": 6.70914046,
+      "usdBrl": 5.10017054,
+      "brlCny": 1.31524365,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
