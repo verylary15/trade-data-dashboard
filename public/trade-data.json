@@ -45608,11 +45608,11 @@
   {
     "date": "2026-09-14",
     "ts": "2026-09-14T16:00:00+08:00",
-    "runTs": "2026-09-14T14:46:25.601+08:00",
+    "runTs": "2026-09-14T22:27:20.605+08:00",
     "fx": {
-      "usdCny": 6.71077853,
-      "usdBrl": 5.12442092,
-      "brlCny": 1.30942011,
+      "usdCny": 6.7083246,
+      "usdBrl": 5.1235968,
+      "brlCny": 1.30978278,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
