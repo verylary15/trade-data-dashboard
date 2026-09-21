@@ -46371,11 +46371,11 @@
   {
     "date": "2026-09-21",
     "ts": "2026-09-21T16:00:00+08:00",
-    "runTs": "2026-09-21T14:41:56.591+08:00",
+    "runTs": "2026-09-21T14:48:37.557+08:00",
     "fx": {
       "usdCny": 6.70073841,
       "usdBrl": 5.14418512,
-      "brlCny": 1.30200018,
+      "brlCny": 1.30211761,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
