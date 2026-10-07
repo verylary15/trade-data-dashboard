@@ -48333,11 +48333,11 @@
   {
     "date": "2026-10-07",
     "ts": "2026-10-07T16:00:00+08:00",
-    "runTs": "2026-10-07T15:32:45.030+08:00",
+    "runTs": "2026-10-07T22:47:24.564+08:00",
     "fx": {
-      "usdCny": 6.7055176,
-      "usdBrl": 4.98290828,
-      "brlCny": 1.34551632,
+      "usdCny": 6.70535838,
+      "usdBrl": 4.98320015,
+      "brlCny": 1.34107471,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
