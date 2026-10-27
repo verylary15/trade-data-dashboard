@@ -50622,11 +50622,11 @@
   {
     "date": "2026-10-27",
     "ts": "2026-10-27T16:00:00+08:00",
-    "runTs": "2026-10-27T21:40:03.503+08:00",
+    "runTs": "2026-10-27T21:50:10.948+08:00",
     "fx": {
-      "usdCny": 6.66828624,
-      "usdBrl": 5.37200038,
-      "brlCny": 1.24074095,
+      "usdCny": 6.66859282,
+      "usdBrl": 5.31144658,
+      "brlCny": 1.25551348,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
