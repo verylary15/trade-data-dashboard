@@ -50731,11 +50731,11 @@
   {
     "date": "2026-10-28",
     "ts": "2026-10-28T16:00:00+08:00",
-    "runTs": "2026-10-28T15:08:49.208+08:00",
+    "runTs": "2026-10-28T22:33:28.505+08:00",
     "fx": {
-      "usdCny": 6.66764396,
-      "usdBrl": 5.3513924,
-      "brlCny": 1.24586622,
+      "usdCny": 6.66683159,
+      "usdBrl": 5.34341915,
+      "brlCny": 1.24428441,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
