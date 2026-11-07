@@ -51930,11 +51930,11 @@
   {
     "date": "2026-11-07",
     "ts": "2026-11-07T16:00:00+08:00",
-    "runTs": "2026-11-07T15:35:21.201+08:00",
+    "runTs": "2026-11-07T22:25:52.578+08:00",
     "fx": {
       "usdCny": 6.67454457,
-      "usdBrl": 5.50509899,
-      "brlCny": 1.21259803,
+      "usdBrl": 5.50514985,
+      "brlCny": 1.21259094,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
