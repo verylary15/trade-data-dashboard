@@ -52366,11 +52366,11 @@
   {
     "date": "2026-11-10",
     "ts": "2026-11-10T16:00:00+08:00",
-    "runTs": "2026-11-10T16:41:46.023+08:00",
+    "runTs": "2026-11-10T23:51:06.015+08:00",
     "fx": {
-      "usdCny": 6.67081284,
-      "usdBrl": 5.51000152,
-      "brlCny": 1.21086166,
+      "usdCny": 6.67161005,
+      "usdBrl": 5.5113253,
+      "brlCny": 1.21055813,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
