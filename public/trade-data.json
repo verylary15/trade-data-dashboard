@@ -53020,11 +53020,11 @@
   {
     "date": "2026-11-15",
     "ts": "2026-11-15T16:00:00+08:00",
-    "runTs": "2026-11-15T16:12:24.563+08:00",
+    "runTs": "2026-11-15T23:01:17.155+08:00",
     "fx": {
-      "usdCny": 6.67192805,
-      "usdBrl": 5.66006866,
-      "brlCny": 1.1787721,
+      "usdCny": 6.67171366,
+      "usdBrl": 5.66261061,
+      "brlCny": 1.17818968,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
