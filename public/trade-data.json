@@ -53892,7 +53892,7 @@
   {
     "date": "2026-11-20",
     "ts": "2026-11-20T09:30:00+08:00",
-    "runTs": "2026-11-20T00:51:28.457+08:00",
+    "runTs": "2026-11-20T00:58:16.864+08:00",
     "fx": {
       "usdCny": 6.68401892,
       "usdBrl": 5.90002555,
@@ -53901,7 +53901,7 @@
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
       },
-      "usdCnyMid": null
+      "usdCnyMid": 6.7128
     },
     "commodities": {
       "au9999": {
