@@ -54219,11 +54219,11 @@
   {
     "date": "2026-11-21",
     "ts": "2026-11-21T16:00:00+08:00",
-    "runTs": "2026-11-21T16:36:40.824+08:00",
+    "runTs": "2026-11-21T23:41:09.321+08:00",
     "fx": {
-      "usdCny": 6.67171396,
-      "usdBrl": 5.94879541,
-      "brlCny": 1.12154401,
+      "usdCny": 6.6715125,
+      "usdBrl": 5.93964547,
+      "brlCny": 1.12321729,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
