@@ -54328,11 +54328,11 @@
   {
     "date": "2026-11-22",
     "ts": "2026-11-22T16:00:00+08:00",
-    "runTs": "2026-11-22T16:32:36.152+08:00",
+    "runTs": "2026-11-22T23:43:30.854+08:00",
     "fx": {
-      "usdCny": 6.67290354,
+      "usdCny": 6.67578984,
       "usdBrl": 5.93488259,
-      "brlCny": 1.12409342,
+      "brlCny": 1.12625794,
       "sources": {
         "spot": "https://www.xe.com/zh-cn/currencyconverter/",
         "mid": "chinamoney.com.cn (ccpr.json)"
